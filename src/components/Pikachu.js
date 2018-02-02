@@ -28,6 +28,13 @@ class Pikachu extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+    //okay the state of Pikachu got updated...
+    //now do it to the actual picture of pikachu...which
+    //was outside of the react dom global...//see public/index.html;
+    this.resizePikachu();
+  }
+
   render() {
     return (
       <div>
