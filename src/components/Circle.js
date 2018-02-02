@@ -4,12 +4,14 @@ class Circle extends React.Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     return (this.props.color !== nextProps.color);
+    //SOLN...HUH?
+    // return Boolean(nextProps.color !== this.props.color);
   }
 
   render() {
     const { color } = this.props;
-    console.log(`A ${color} circle was rendered!`);
     //const { color } === this.props.color
+    console.log(`A ${color} circle was rendered!`);
 
     return (
       <div className={`circle ${color}`}></div>
